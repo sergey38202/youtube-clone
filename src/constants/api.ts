@@ -1,0 +1,1 @@
+export const YOUTUBE_MAX_RESULT = 50;

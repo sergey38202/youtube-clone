@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, {FormEvent, useState} from 'react';
 import { useNavigate } from "react-router-dom";
-import { Paper, IconButton } from '@mui/material';
+import { Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+
+import * as SC from "./styles";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
-  const onhandleSubmit = (e) => {
+  const onhandleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (searchTerm) {
@@ -35,9 +37,12 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <IconButton type='submit' sx={{ p: '10px', color: 'red' }} aria-label='search'>
+      <SC.SearchBarIconBtn
+          type='submit'
+          aria-label='search'
+      >
         <SearchIcon />
-      </IconButton>
+      </SC.SearchBarIconBtn>
     </Paper>
   );
 };
