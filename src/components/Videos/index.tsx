@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import {TVideosProps} from "./types";
 import Loader from "../Loader";
 import VideoCard from "../VideoCard";
