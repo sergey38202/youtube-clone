@@ -56,9 +56,10 @@ export const SidebarCloseIcon = styled(CloseIcon)<{ isOpenedSideBar: boolean }>`
 `;
 
 export const SidebarBurgerIcon = styled(MenuIcon)<{ isOpenedSideBar: boolean }>`
-  display: none;
+  display: none !important;
+  
     @media (max-width: 550px) {
-      display: ${({ isOpenedSideBar }) => isOpenedSideBar ? 'none' : 'block'};
+      display: ${({ isOpenedSideBar }) => isOpenedSideBar ? 'none' : 'block'} !important;
       position: absolute;
       top: 13%;
       left: 15px;
