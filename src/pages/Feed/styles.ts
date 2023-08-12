@@ -43,10 +43,10 @@ export const FeedInfoBlock = styled(Box)<{ isOpenedSideBar: boolean }>`
 `;
 
 export const SidebarCloseIcon = styled(CloseIcon)<{ isOpenedSideBar: boolean }>`
-  display: none;
+  display: none !important;
   
   @media (max-width: 550px) {
-    display: ${({ isOpenedSideBar }) => isOpenedSideBar ? 'block' : 'none'};
+    display: ${({ isOpenedSideBar }) => isOpenedSideBar ? 'block' : 'none'} !important;
     position: absolute;
     top: 15px;
     right: 15px;
